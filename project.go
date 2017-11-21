@@ -64,8 +64,6 @@ func elizaResponse(input string )string {
 		return responses[randIndex]
 	}
 
-
-
 	//i forget
 	if matched, _ := regexp.MatchString(`(?i).*\bi[fF]orget\b.*`, input); matched{
 		responses := []string {
@@ -318,85 +316,162 @@ func elizaResponse(input string )string {
 		return responses[randIndex]
 	}
 	
-	//perhaps
-	if matched, _ := regexp.MatchString(`(?i).*\b[pP]erhaps\b.*`, input); matched{
+	//am i
+	if matched, _ := regexp.MatchString(`(?i).*\b[aA]m i\b.*`, input); matched{
 		responses := []string {
-		"You don't seem quite certain.",
-		"Why the uncertain tone ?",
-		"Can't you be more positive ?",
-		"You aren't sure ?",
-		"Don't you know ?",
-		"How likely, would you estimate ?",
+		"Do you believe you are?",
+		"Would you want to be?",
+		"Do you wish I would tell you you are?",
+		"What would it mean if you were?",
 		}
 		randIndex := rand.Intn(len(responses))
 		return responses[randIndex]
 	}
 	
-	//perhaps
-	if matched, _ := regexp.MatchString(`(?i).*\b[pP]erhaps\b.*`, input); matched{
+	//are you
+	if matched, _ := regexp.MatchString(`(?i).*\b[aA]re you\b.*`, input); matched{
 		responses := []string {
-		"You don't seem quite certain.",
-		"Why the uncertain tone ?",
-		"Can't you be more positive ?",
-		"You aren't sure ?",
-		"Don't you know ?",
-		"How likely, would you estimate ?",
+		"Why are you interested in whether I am or not?",
+		"Would you prefer if I weren't ?",
+		"Perhaps I am in your fantasies.",
+		"Do you sometimes think I am?",
+		"Would it matter to you?",
+		"What if I were?",
 		}
 		randIndex := rand.Intn(len(responses))
 		return responses[randIndex]
 	}
 
+	//are
+	if matched, _ := regexp.MatchString(`(?i).*\b[aA]re\b.*`, input); matched{
+		responses := []string {
+		"Did you think they might not be?",
+		"Would you like it if they were not?",
+		"What if they were not?",
+		"Are they always?",
+		"Possibly they are.",
+		"Are you positive they are?",
+		}
+		randIndex := rand.Intn(len(responses))
+		return responses[randIndex]
+	}
 
+	//your
+	if matched, _ := regexp.MatchString(`(?i).*\byour\b.*`, input); matched{
+		responses := []string {
+		"Why are you concerned over mine?",
+		"What about your own?",
+		"Are you worried about someone else's?",
+		"What makes you think of mine?",
+		"Do you want mine ?",
+		}
+		randIndex := rand.Intn(len(responses))
+		return responses[randIndex]
+	}
 
+	//was i
+	if matched, _ := regexp.MatchString(`(?i).*\b[Ww]as i\b.*`, input); matched{
+		responses := []string {
+		"What if you were?",
+		"Do you think you were?",
+		"Were you?",
+		"What would it mean if you were?",
+		"What does that suggest to you ?",
+		}
+		randIndex := rand.Intn(len(responses))
+		return responses[randIndex]
+	}
 
-	
+	//i was
+	if matched, _ := regexp.MatchString(`(?i).*\b[iI] was\b.*`, input); matched{
+		responses := []string {
+		"Were you really ?",
+		"Why do you tell me you were?",
+		"Perhaps I already know you were.",
+		}
+		randIndex := rand.Intn(len(responses))
+		return responses[randIndex]
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	*/
+	//i desire
+	if matched, _ := regexp.MatchString(`(?i).*\b[iI] desire\b.*`, input); matched{
+		responses := []string {
+		"What would it mean to you if you got that?",
+		"Why do you want that?",
+		"Suppose you got that soon.",
+		"What if you never got that ?",
+		"What would getting that mean to you ?",
+		"What does wanting that have to do with this discussion ?",
+		}
+		randIndex := rand.Intn(len(responses))
+		return responses[randIndex]
+	}
+	//i am sad
+	if matched, _ := regexp.MatchString(`(?i).*\b[iI] am sad\b.*`, input); matched{
+		responses := []string {
+		"I am sorry to hear that you are upset.",
+		"Do you think coming here will help you not to be upset ?",
+		"I'm sure it's not pleasant to be sad.",
+		"Can you explain what made you feel like that ?",
+		}
+		randIndex := rand.Intn(len(responses))
+		return responses[randIndex]
+	}
+	//i am happy
+	if matched, _ := regexp.MatchString(`(?i).*\b[iI] am happy\b.*`, input); matched{
+		responses := []string {
+		"How have I helped you to be happy?",
+		"What makes you happy just now ?",
+		"Can you explain why you are suddenly feeling like this ?",
+		}
+		randIndex := rand.Intn(len(responses))
+		return responses[randIndex]
+	}
+	//i believe i 
+	if matched, _ := regexp.MatchString(`(?i).*\b[iI] believe i\b.*`, input); matched{
+		responses := []string {
+		"Do you really think so ?",
+		"But you are not sure.",
+		"Do you really doubt yourself?",
+		}
+		randIndex := rand.Intn(len(responses))
+		return responses[randIndex]
+	}
+	//i am
+	if matched, _ := regexp.MatchString(`(?i).*\b[iI] am\b.*`, input); matched{
+		responses := []string {
+		"Is it because you came to me ?",
+		"How long have you been like that ?",
+		"Do you believe it is normal to be like that?",
+		"Do you enjoy being like that ?",
+		"Do you know anyone else who is like that ?",
+		}
+		randIndex := rand.Intn(len(responses))
+		return responses[randIndex]
+	}
+	//i cannot
+	if matched, _ := regexp.MatchString(`(?i).*\b[iI] cannot\b.*`, input); matched{
+		responses := []string {
+		"How do you know that you can't?",
+		"Have you tried?",
+		"Perhaps you could do that now.",
+		"Do you really want to be able to do that?",
+		"What if you could do that?",
+		}
+		randIndex := rand.Intn(len(responses))
+		return responses[randIndex]
+	}
+	//i don't
+	if matched, _ := regexp.MatchString(`(?i).*\b[iI] don't\b.*`, input); matched{
+		responses := []string {
+		"Don't you really?",
+		"Why don't you?",
+		"Do you wish to be able to?",
+		"Does that trouble you ?",
+		}
+		randIndex := rand.Intn(len(responses))
+		return responses[randIndex]
+	}
 
 	responses := []string {
 		"I'm not sure I understand you fully.",

@@ -13,19 +13,78 @@
   </head>
   <style>
 
-.userDiv {
-    background-color: #2095FE;
-    color: #fff;
-    margin-left: 80px;
+  body{
+background: #F0F2F0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #000C40, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #000C40, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  #main{
+    width: 50%;
+    margin:auto;
+    margin-top:10%;
+  }
+
+
+    .userDiv,.elizaDiv {
+    margin-top: 20px;
+    padding: 5px 9px;
+    max-width: 50%;
+    clear: both;
+
+    }
+
+    .userDiv{
+    float: left;
+    margin-right: auto;
+    -webkit-border-radius: 8px 8px 8px 0px;
+    -moz-border-radius: 8px 8px 8px 0px;
+    -o-border-radius: 8px 8px 8px 0px;
+    -ms-border-radius: 8px 8px 8px 0px;
+    border-radius: 8px 8px 8px 0px;
+    background-color: #65B045;
+    color: #ffffff;
 }
-.elizaDiv {
-    background-color: #E5E4E9;
-    color: #363636;
-    margin-right: 80px;
+
+.elizaDiv{
+    float: right;
+    margin-left: auto;
+    text-align: right;
+    -webkit-border-radius: 8px 8px 0px 8px;
+    -moz-border-radius: 8px 8px 0px 8px;
+    -o-border-radius: 8px 8px 0px 8px;
+    -ms-border-radius: 8px 8px 0px 8px;
+    border-radius: 8px 8px 0px 8px;
+    background-color: #07D;
+    color: white;
 }
+
+#lists {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    position:absolute;
+    visibility: hidden;
+    margin-top: 10px;;
+    margin-bottom: 10px;
+    border-radius:10px;
+    
+    border: 14px ridge;
+}
+
+h1{
+ font-style: italic;
+ background: -webkit-linear-gradient(red, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 
   </style>
   <body>
+    <div id="main">
     <div class="container">
       <h1>Eliza Chatbot!</h1>
     </div>
@@ -37,11 +96,11 @@
           <input type="text" class="form-control" id="user-input" aria-describedby="user-input-help" placeholder="Talk to Eliza">
         </div>
         
-        <button type="submit" class="btn btn-primary">Send</button>
+        <button type="submit" class="btn btn-danger">Send</button>
       </form>
     </div>
 
-    <div class="lists">
+    <div id="lists">
       <ul id="chat">
 
       </ul>
@@ -61,18 +120,11 @@
           $.get('/user-input', { value: $('#user-input').val() } )
             .done(function (data) {
               $('#output-area').val(data);
-
-
-              var containerEliza = document.createElement('div');
-              containerEliza.class = "elizaDiv";
-              list.append(containerEliza);
-
-              var entry1 = document.createElement('li');
-              entry1.appendChild(document.createTextNode(data));
-              containerEliza.appendChild(entry1);
+             
+              document.getElementById("lists").style.visibility = "visible";
 
               var container = document.createElement('div');
-              container.class = "userDiv";
+              container.className = "userDiv";
               list.append(container);
 
               var entry = document.createElement('li');
@@ -80,11 +132,21 @@
               entry.appendChild(document.createTextNode(userInput));
               container.appendChild(entry);
 
+              var containerEliza = document.createElement('div');
+              containerEliza.className = "elizaDiv";
+              list.append(containerEliza);
+
+              var entry1 = document.createElement('li');
+              entry1.appendChild(document.createTextNode(data));
+              containerEliza.appendChild(entry1);
+              document.getElementById("user-input-form").reset();
+
             })
 
         });
 
      
     </script>
+    </div>
   </body>
 </html>

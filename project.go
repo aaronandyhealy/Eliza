@@ -473,6 +473,14 @@ func elizaResponse(input string )string {
 		return responses[randIndex]
 	}
 
+	if matched, _ := regexp.MatchString(`^$`, input); matched{
+		responses := []string {
+		"Please say something?",
+		}
+		randIndex := rand.Intn(len(responses))
+		return responses[randIndex]
+	}
+
 	responses := []string {
 		"I'm not sure I understand you fully.",
 		"Please go on.",

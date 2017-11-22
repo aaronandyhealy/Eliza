@@ -12,114 +12,115 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   </head>
+  
   <style>
 
-  body{
-background: #F0F2F0;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #000C40, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #000C40, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    body{
+    background: #F0F2F0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000C40, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000C40, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  }
-img{
-    width:45%;
-    margin-left:55%;
-    margin-bottom:10px;
-}
-  .fixed-bottom,.container{
-    width:45%;
-    margin-left:55%;
-    margin-bottom:10px;
-  }
+      }
 
-  #main{
-    width: 50%;
-    margin:auto;
-    margin-top:10%;
-    display: inline-block;
-  }
+    .fixed-bottom,.container{
+      width:45%;
+      margin-left:35%;
+      margin-bottom:10px;
+    }
+
+    #main{
+      width: 50%;
+      margin:auto;
+      margin-top:10%;
+      display: inline-block;
+    }
 
 
     .userDiv,.elizaDiv {
-    margin-top: 20px;
-    padding: 5px 9px;
-    max-width: 50%;
-    clear: both;
+      margin-top: 20px;
+      padding: 5px 9px;
+      max-width: 50%;
+      clear: both;
 
     }
 
     .userDiv{
-    float: left;
-    margin-right: auto;
-    -webkit-border-radius: 8px 8px 8px 0px;
-    -moz-border-radius: 8px 8px 8px 0px;
-    -o-border-radius: 8px 8px 8px 0px;
-    -ms-border-radius: 8px 8px 8px 0px;
-    border-radius: 8px 8px 8px 0px;
-    background-color: #65B045;
-    color: #ffffff;
-}
+      float: left;
+      margin-right: auto;
+      -webkit-border-radius: 8px 8px 8px 0px;
+      -moz-border-radius: 8px 8px 8px 0px;
+      -o-border-radius: 8px 8px 8px 0px;
+      -ms-border-radius: 8px 8px 8px 0px;
+      border-radius: 8px 8px 8px 0px;
+      background-color: #65B045;
+      color: #ffffff;
+    }
 
-.elizaDiv{
-    float: right;
-    margin-left: auto;
-    text-align: right;
-    -webkit-border-radius: 8px 8px 0px 8px;
-    -moz-border-radius: 8px 8px 0px 8px;
-    -o-border-radius: 8px 8px 0px 8px;
-    -ms-border-radius: 8px 8px 0px 8px;
-    border-radius: 8px 8px 0px 8px;
-    background-color: #07D;
-    color: white;
-}
+    .elizaDiv{
+      float: right;
+      margin-left: auto;
+      text-align: right;
+      -webkit-border-radius: 8px 8px 0px 8px;
+      -moz-border-radius: 8px 8px 0px 8px;
+      -o-border-radius: 8px 8px 0px 8px;
+      -ms-border-radius: 8px 8px 0px 8px;
+      border-radius: 8px 8px 0px 8px;
+      background-color: #07D;
+      color: white;
+    }
 
-#lists {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-    position:absolute;
-    visibility: hidden;
-    margin-top: 10px;;
-    margin-bottom: 10px;
-    border-radius:10px;
-    
-    border: 1px ridge;
-}
+    #lists {
+      margin: auto;
+      width: 30%;
+      padding: 10px;
+      position:absolute;
+      visibility: hidden;
+      margin-top: 10px;;
+      margin-bottom: 10px;
+      border-radius:10px;
+      border: 1px ridge;
+    }
 
-h1{
- font-style: italic;
- background: red;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    h1{
+      font-style: italic;
+      background: red;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-ul{
-  list-style:none;
-}
+    ul{
+      list-style:none;
+    }
+
+    p {
+      color:white;
+    }
 
   </style>
+
   <body>
-
-<img src="eliza.jpg" alt="Mountain View">
-
 
     <div id="main">
 
     <div class="fixed-bottom">
+
       <h1>Eliza Chatbot!</h1>
-      <!-- Adapted from: https://v4-alpha.getbootstrap.com/components/forms/ -->
+      <p>ELIZA emulates a Rogerian psychotherapist. ELIZA has almost no intelligence whatsoever, only tricks like string substitution and canned responses based on keywords.
+         Yet when the original ELIZA first appeared in the 60's,
+          some people actually mistook her for human. The illusion 
+          of intelligence works best, however, if you limit your conversation to 
+          talking about yourself and your life.</p>
       <form id="user-input-form">
         <div class="form-group">
           <input type="text" class="form-control" id="user-input" aria-describedby="user-input-help" placeholder="Talk to Eliza">
-        </div>
-        
+        </div> 
         <button type="submit" class="btn btn-danger">Send</button>
       </form>
+
     </div>
 
     <div id="lists">
-      <ul id="chat">
-
-      </ul>
+      <ul id="chat"></ul>
     </div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -128,7 +129,8 @@ ul{
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
     <script>
-       var list = document.getElementById('chat');
+
+      var list = document.getElementById('chat');
       
       $("#user-input-form").submit(
         function(event) {
